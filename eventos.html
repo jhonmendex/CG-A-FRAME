@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>PRIMITIVAS</title>
+		<link rel="stylesheet" href="">
+		<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+	</head>
+	<body>
+		
+		<a-scene>
+			<a-camera> 
+			<a-cursor fuse="true" fuse-timeout="2000"></a-cursor>
+		</a-camera>
+	<a-box position="0 0 -2" color="blue"></a-box>
+	<a-sky color="skyblue"></a-sky>
+</a-scene>
+<script>
+	var box = document.querySelector('a-box');
+	   box.addEventListener('click',function(){
+       box.setAttribute('color', 'red'); 
+       box.setAttribute('position', '0 0 -10');        
+	});
+
+</script>
+</body>
+</html>
